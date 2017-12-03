@@ -1,0 +1,453 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>基於Instacart重購行為的模式勘探</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-- Header Section -->
+<section class="banner" role="banner"> 
+  <!-- Navigation Section -->
+  <header id="header">
+    <div class="header-content clearfix"> 
+	<a class="logo" href="#">
+		<h3>基於Instacart重購行為的模式勘探<h3>
+	</a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="#introduction">專題背景</a></li>
+          <li><a href="#works">數據處理</a></li>
+	  <li><a href="#rules">規則挖掘/系統開發</a></li>
+       <li><a href="#system">使用情景</a></li>
+	  <li><a href="#contact">心得</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+  <!-- Navigation Section --> 
+  <!-- Banner Section -->
+  <div class="container">
+    <div class="col-md-7 banner-inner-wrapper">
+      <div class="banner-text">
+        <h1>指導老師：許嘉裕</h1>
+        <p>小組成員：呂清彬 1031678 &nbsp 吳晨茜 1031774 &nbsp 陳小芳 1031775</p>
+        <a href="#" class="btn">Find out more</a> </div>
+      <!-- banner text --> 
+    </div>
+  </div>
+  <!-- Banner Section --> 
+</section>
+<!-- Header Section --> 
+<!-- Intro Section -->
+<section id="introduction" class="section introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+          <h1>&nbsp&nbspInstacart<br><br><h3>Market Basket Analysis<h3></h1>
+          <h4><br><br><br>&nbsp挖掘人們購買行為背後有趣的資訊。</h4>
+          <h4><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp提升顧客的線上購物體驗。</h4>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="intro-content">
+          <p>
+          	<li>在許嘉裕老師的指引下，我們選擇Kaggle這個平台上的項目作為專題研究方向。Kaggle是一个通過数据建模和数据分析的竞赛平台，它的目标是通过众包的形式来解决预测建模等相關問題，进而使数据科学成为一场运动。經過探討和分析，我們選取Kaggle上“Instacart Market Basket Analysis”這個項目作為我們的專題主題。
+	     	</li>
+	  </p>
+          <p>  
+			<li>Instacart獨創的商業經營模式是我們將它選定為我們專題主題的關鍵因素。Instacart成立於2012年，它是一個給居民運送日常食品雜貨的平臺，目前服務已遍佈美國的三十大主要城市。Instacart的玩法是這樣：買家在軟體上下單，附近的採購者接單後，幫助買家到指定商店代購商品，並在一個小時內將商品送至買家處，採購者獲得報酬。這種獨特的商業模式解決了當前生鮮電商的物流短板，震撼了世界的科技公司，使其躋身於最有前途的共用經濟型公司之一。			
+            </li> 
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="intro-content">
+          <h4><br><br><br>本次研究的主要內容是:</h4>
+          <ul>
+            <li>1、統計分析Instacart顧客的交易數據，探索顧客們獨特有趣的購物模式。2、利用資料分析語言Python/R語言，進行大數據分析和模型建構，以此預測顧客的重購商品的可能性，即顧客下一次將購買哪些商品或者是哪些商品會被添加到購物車裏？</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Intro Section --> 
+
+<!-- work section -->
+<section id="works" class="works section no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-1.png" class="work-box"> <img src="images/work-1.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-2.png" class="work-box"> <img src="images/work-2.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-3.png" class="work-box"> <img src="images/work-3.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-4.jpg" class="work-box"> <img src="images/work-42.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-5.png" class="work-box"> <img src="images/work-5.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-62.png" class="work-box"> <img src="images/work-62.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <img src="images/work-0.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-8.png" class="work-box"> <img src="images/work-8.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-9.png" class="work-box"> <img src="images/work-9.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-10.png" class="work-box"> <img src="images/work-10.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-11.png" class="work-box"> <img src="images/work-11.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-12.png" class="work-box"> <img src="images/work-12.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+
+<!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/work-7.png" class="work-box"> <img src="images/work-7.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+
+
+        <!-- overlay --> 
+        </a> </div>
+    </div>
+  </div>
+</section>
+<!-- work section --> 
+
+
+
+
+
+
+
+<!-- rules section -->
+<footer id="rules" class="footer">
+  <div class="container">
+
+<!--加頭-->
+    <div class="row">
+    
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+          <h2>&nbsp&nbsp規則挖掘演算法 <br><br><h3>Association Analysis-Apriori</h3> <br><h3>Sequential Pattern Mining</h3></h2>
+          <br><br><h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp系統開發 </h2><br><h3>&nbsp&nbsp&nbsp&nbsp
+          PHP+Mysql+Apache</h3>
+        </div>
+      </div>
+ 
+      <div class="col-md-8 col-sm-6">
+        <div class="intro-content">
+          <h4><br>研究目的:</h4>
+          <ul>
+         	 <li> （1）挖掘出影響顧客購買行為的因素。 </li>
+          	 <li> （2）分析商品与商品间的关联，預測人們會經常將哪些商品放在一起購買。 </li>
+ 			 <li> （3）通過分析人們在不同时间不同順序下購買的商品信息，从而挖掘大部分人都有的行為模式。 </li>
+ 			 <li> （4） 當顧客將一件商品加入購物車時，我們能預測顧客下一個放入購物車的商品大概會是什麼。</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-sm-3">
+        <div class="intro-content">
+          <h4><br>研究方向流程圖:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+                  規則總結：</h4>
+          <ul>          
+              <div class="container-fluid">
+                <div class="row no-gutter">
+                  <div class="col-lg-4 col-md-4 col-sm-4 work"> <a href="images/pic-001.png" class="work-box">
+                   <img src="images/pic-001.png" alt="">
+                    <div class="overlay">
+                      <div class="overlay-caption">
+                        <p><i class="fa fa-search-plus fa-2x"></i></p>
+                      </div>
+                    </div>
+                    <!-- overlay --> 
+                    </a> </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 work"> <a href="images/pic-002.png" class="work-box"> 
+                  <img src="images/pic-002.png" alt="">
+                    <div class="overlay">
+                      <div class="overlay-caption">
+                        <p><i class="fa fa-search-plus fa-2x"></i></p>
+                      </div>
+                    </div>
+                    <!-- overlay --> 
+                    </a> </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 work"> <a href="images/pic-003.png" class="work-box"> 
+                  <img src="images/pic-003.png" alt="">
+                    <div class="overlay">
+                      <div class="overlay-caption">
+                        <p><i class="fa fa-search-plus fa-2x"></i></p>
+                      </div>
+                    </div>
+                    <!-- overlay -->
+                    </a> </div>
+                </div>
+              </div>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--加尾-->
+  </div>
+
+</footer>
+
+<!-- rules section --> 
+
+
+
+
+
+
+
+<!-- system section -->
+<footer id="system" class="footer">
+  <div class="container">
+
+<!--加頭-->
+    <div class="row">
+    
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+          <h2><center>網頁使用情景
+          <br><br><h3>Usage Scenarios For Web</h3></center>  <br>
+			<img src="images/004.png" width="380">
+        </div>
+      </div>
+ 
+
+
+      <div class="col-md-8 col-sm-3">
+        <div class="intro-content">
+          <h4><big>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 功能實現：</big></h4>
+          <ul>          
+              <div class="container-fluid">
+                <div class="row no-gutter">
+                
+                  <div class="col-lg-6 col-md-6 col-sm-6 work"> <a href="images/pic-005.png" class="work-box"> 
+                  <img src="images/pic-005.png" alt="">
+                    <div class="overlay">
+                      <div class="overlay-caption">
+                        <p><i class="fa fa-search-plus fa-2x"></i></p>
+                      </div>
+                    </div>
+                    <!-- overlay --> 
+                    </a> </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 work"> <a href="images/pic-006.png" class="work-box"> 
+                  <img src="images/pic-006.png" alt="">
+                    <div class="overlay">
+                      <div class="overlay-caption">
+                        <p><i class="fa fa-search-plus fa-2x"></i></p>
+                      </div>
+                    </div>
+                    <!-- overlay -->
+                    </a> </div>
+                </div>
+              </div>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--加尾-->
+  </div>
+
+</footer>
+
+<!-- system section --> 
+
+
+
+
+
+
+
+<!-- contant section -->
+<footer id="contact" class="footer">
+  <div class="container">
+
+<!--加頭-->
+    <div class="row">
+      <div class="col-md-8 col-sm-3">
+        <div class="intro-content">
+          <h4>專業實習自我評估：</h4>
+            <li>專題期初，我們側重于熟悉資料和學習相關的方法和思想，準備工作幾乎是在對數據進行各種各樣的預處理，研究我們的專題背景和我們今後的方向。開始的階段準備是從無到有的過程。</li>
+            <li>暑假之後，我們的時間相對充沛，也是專題的重要階段。在許嘉裕老師的指導下，我們有了更清晰的方向，每週一次的會議，老師會針對我們的問題提出改善，并給我們佈置下一階段的任務，促使我們更加高效地完善整個推薦系統。我們認為相對於期初，我們完成專題的效率有明顯的提升地方。最後兩個月，我們的研究重點在於進一步優化顧客的行為模式分析，深入挖掘顧客心理，同時系統整合專題成果報告。</li>
+         
+          <h4><br><br>專題實習心得感想:</h4>                 
+		<li>資料的學習和準備是至關重要的，不容小覷。不僅要深入地學習還要不斷地操作和實踐才能真正學以致用。時間的控制也很重要，在最	短的時間做出最快的分析才能提高效率，這同樣也取決于對資料的熟悉度和操作的熟練度。同樣，一個團隊的合作和分工也至關重要。明確自己的方向和目的是一切的根本也是一切的動力.學會變通，懂得向成員或老師請教，而不是固執己見，往往有時候自己不能意識到的問題別人能看到。學習團隊的協作，各司其職，物盡其用，才能發揮最大的效益。
+希望在今後的學習中，無論是在語言還是技術上，我們都會認真地提升自己。最後真誠地感謝元智大學提供便利的資源環境和學習平臺，感謝許嘉裕老師全程給予我們的支持與鼓勵。</li>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4 col-sm-3">
+		<div class="intro-content">
+          <h1><br>&nbsp專題完成進度<br><br>
+         <center><h4><br>1.搭建系統分析的環境</h4>
+        		 <h4><br>2.資料集的可視化分析</h4>
+        		 <h4><br>3.資料整理與規則萃取</h4>
+       			  <h4><br>4.系統開發與情景實現</h4></center>
+         </div>
+	  </div>
+
+
+
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+
+<!--加尾-->
+  </div>
+
+</footer>
+
+<!-- footer section --> 
+
+
+
+
+
+
+
+
+
+<!-- footer section -->
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="col-md-5">
+      <h4>Contact</h4>
+      <p> Yuan Ze University 桃園市中壢區遠東路 135 號.<br>
+        Call: (03) 4638800 <br>
+       </p>
+    </div>
+    <div class="col-md-4">
+      <h4>Social presense</h4>
+      <ul class="footer-share">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <p>@ 2017 All rights reserved. All Rights Reserved<br></p>
+    </div>
+  </div>
+</footer>
+<!-- footer section -->
+
+
+
+
+<!-- JS FILES --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.fancybox.pack.js"></script> 
+<script src="js/retina.min.js"></script> 
+<script src="js/modernizr.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>

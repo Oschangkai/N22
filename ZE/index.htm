@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	<style>
+		
+		body{
+		font-family:fantasy;
+		}
+		
+		div{
+		font-family:sans-serif;
+		}
+		</style>
+		<title>Yzuimstu-1031766</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="images/favicon.ico" rel="shortcut icon" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/origin-logo.png" alt="" /></span>
+					<h1 id="logo"><a href="#">陳曄</a></h1>
+					<p>元智大學資訊管理學系<br>
+第二十二屆專業實習報告</p>
+					<p>分組代號：ZE02<br>
+					輔導老師：邱昭彰 教授<br>
+					學    號：1031766<br>
+					</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">工作詳述</a></li>
+						<li><a href="#two">實習期間完成之進度</a></li>
+						<li><a href="#three">學習</a></li>
+						<li><a href="#four">自我評估及心得感想</a></li>
+					</ul>
+				</nav>
+			<!--	<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer> -->
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>工作詳述</h2>
+										<p>主要分爲：</p>
+											<li><a href="#crawler">爬蟲撰寫</a></li>
+											<li><a href="#keyword">關鍵詞萃取</a></li>
+											<li><a href="#Tc">文本分類</a></li>
+									</header>
+								<!--文本-->
+										<div id="crawler"  style="padding:10px;margin-top:100px">
+											<h4>（1）爬蟲撰寫</h4>
+												<p>	&emsp;BILAB主要工作是通過爬蟲抓取網路上的資料，再進行後端的分析，最後繪製成圖表呈現。從網路上抓取的資料是這個流程的基礎，爬蟲程式的撰寫必不可少。
+												Lab中主要使用Java程式語言與MSSQL資料庫。爬蟲大多是基於Selenium 開源 API進行撰寫的。<br>
+												&emsp;圖爲爬蟲程式的主函數。
+												<img src="images/crawler.png" height="400" width="800" />
+												<br>
+												&emsp;部分資料庫中所爬取的資料截圖：<br>
+												<img src="images/crawlerdb.png" height="400" width="800" />
+												</p>
+										</div>
+										
+										<div id="keyword" style="padding:10px">
+											<h4>（2）關鍵詞萃取</h4>
+												<p>&emsp;	目前關鍵詞萃取一般分為兩個主要步驟：選取候選關鍵詞、從候選關鍵詞集合中推薦關鍵詞。<br>
+												<h5>1.分詞以生成候選關鍵詞</h5>
+												<div style="margin-left:50px">
+													<li>基於字典、詞庫匹配的分詞方法;</li>
+													<li>基於詞頻度統計的分詞方法；</li>
+													<li>基於知識理解的分詞方法。</li>
+												</div>
+												</p>
+												<p>&emsp;														第一類方法應用詞典匹配、漢語詞法或其它漢語語言知識進行分詞，如：正向最大匹配（maximum matching method）、逆向最大匹配（reverse maximum matching method）等。這類方法簡單、分詞效率較高，但漢語語言現象複雜豐富，詞典的完備性、規則的一致性等問題使其難以適應開放的大規模文字的分詞處理。
+												</p>
+												<p>&emsp;第二類基於統計的分詞方法則是通過字和詞的統計資訊，如把相鄰字間的資訊、詞頻及相應的共同出現資訊等應用於分詞，由於這些資訊是通過調查真實語料而取得的，因而基於統計的分詞方法具有較好的實用性。
+												</p>
+												<p>&emsp;
+												第三類基於知識理解的分詞方法則是讓機器根據現有的資料學習如何分詞。該方法主要基於句法、語法分析，並結合語義分析，通過對上下文內容所提供信息的分析對詞進行定界，它通常包括三個部分：分詞子系統、句法語義子系統、總控部分。這類方法試圖讓機器具有人類的理解能力，需要使用大量的語言知識和信息。由於漢語語言知識的籠統、複雜性，難以將各種語言信息組織成機器可直接讀取的形式。因此目前基於知識的分詞系統還處在試驗階段。
+
+												</p>
+												<h5>Hanlp</h5>
+												<p>&emsp;
+												在本研究中，我們將通過HanLP(Han Language Processing）進行斷詞，獲取候選關鍵詞。HanLP是由一系列模型與算法組成的Java工具包，目標是普及自然語言處理在生產環境中的應用。不僅僅是分詞，而是提供詞法分析、句法分析、語義理解等完備的功能。HanLP具備功能完善、效能高效、架構清晰、語料時新、可自定義的特點。在分詞方面，HanLP中內含了多種多樣的方法。例如，基於HMM-Viterbi的分詞方法，通過NLP（Neuro Linguistic programming）、CRF等多種方法進行分詞。除此之外，還可客製化停用詞，字典。
+												</p>
+												<p>圖爲Hanlp&TextRank程式碼</p>
+												<img src="images/hanlp.png" height="400" width="800" />
+												<h5>2.推薦關鍵詞</h5>
+												<p>&emsp;
+												得到候選關鍵詞集合後，有兩種推薦關鍵詞的方式。一種是通過有監督的方式。通過機器學習，將選取關鍵詞的問題轉換爲一個詞是否爲關鍵詞的二分類問題。另一種是通過非監督的方式，可利用統計詞頻方法來計算權重，選擇高的爲關鍵詞，如TF-IDF（Term frequency–inverse document frequency）(Manning et al., 2008)。也可通過圖模型的方法，將候選關鍵詞放入圖的結構中，找出前K個與其他很多詞存在關聯的詞，作爲關鍵詞，如TextRank(Mihalcea and Tarau et al., 2004)。
+												</p>
+												<p>&emsp;
+												Willyan et al.(2014)利用基於圖的TKG（Twitter Keyword Graph）來爲從推特上抓取的消息找關鍵詞，TKG不需要預先進行訓練即可實做，但因爲缺乏雜訊過濾，導致運行效率不高。Kensuke et al(2016)對維基百科中的文檔進行關鍵詞的提取。其中，他在選取候選關鍵詞上運用TSNC（Top Consecutive Nouns Cohesion），在推薦關鍵詞上利用了Dice coefficient與Keyphraseness的方法。但TCNC選取候選關鍵詞方面的效果不如預期。
+												</p>
+												<p>&emsp;
+												TextRank不需要準備語料庫。且作爲非監督的方式，也無需事先進行訓練即可實做。Bartłomiej et al.(2014)認為TextRank可以準確定義關鍵詞且非監督的方式十分方便。Liu Zhiyuan et al (2011) 認為TextRank等基於圖的關鍵詞抽取演算法取得較以往有監督方法更優的效果。但網路上有些作者認為對上、下文關係的理解存在缺陷，這是後續需要改善的地方。
+												</p>
+												
+										</div>
+										<div id="Tc"  style="padding:10px">
+											<h4>（3）文本分類</h4>
+												<p>	&emsp;即將文章按議題進行分類的分類器。主要是文章通過HanLP分詞接TextRank萃取關鍵詞，當做其特徵來進行議題分類。現我們有下列六種分類方法：
+												<ul>
+													<li>A<sub>1</sub> ：代表該方法不進行正規化。</li>
+													<li>A<sub>2</sub> ：代表該方法進行正規化。<br>
+													<li>B<sub>1</sub> ：分類一篇新進文章時 , 選擇每個議題中綜合加權值最大的作為該議題的分類依據，我們將選取其中最大的判定為新進文章的議題。</li>
+													<li>B<sub>2</sub> ：分類一篇新進文章時 , 選擇每個議題綜合加權值加總的作為該議題的分類依據，我們將選取其中最大的判定為新進文章的議題。</li>
+													<li>B<sub>3</sub> ：分類一篇新進文章時,選擇每個議題綜合加權值加總與GA係數相乘的值的作為該議題的分類依據，我們將選取其中最大的判定為新進文章的議題。即我們原來使用的分類方法。</li>
+												</ul>
+					
+												<p>流程圖如下。</p>
+												<hr />
+												<div>
+												<h4>A<sub>1</sub>& A<sub>2</sub>（資料前置處理階段）</h4>
+												<img src="images/A1.png" alt="" /  height="300" width="600">
+												<img src="images/A2.png" alt="" /  height="300" width="600">
+												<p>&emsp;
+												這一階段可對應原方法的資料前置處理階段。其中Topic<sub>i</sub> 代表第i個議題；Topic<sub>l</sub>代表最後一個議題。即一共有l個議題。這一階段主要是把訓練資料集按議題導入議題詞庫。</p>
+												</div>
+												<hr />
+												<div>
+												<h4>A<sub>1</sub>+ B<sub>1</sub>& A<sub>2</sub>+ B<sub>1</sub></h4>
+												<img src="images/A1B1.png" alt="" /  height="300" width="600">
+												<img src="images/A2B1.png" alt="" /  height="300" width="600">
+												<p>&emsp;
+												這一階段主要是利用分類器把測試資料進行分類，並判斷分類的效果。B<sub>1</sub> 方法指的是分類一篇新進文章時 , 選擇每個議題中綜合加權值最大的作為該議題的分類依據，我們將選取其中最大的判定為新進文章的議題。</p>
+												<p>
+												<span class="image left"><img src="images/max.png" alt="" /></span>
+												<br><br><br><br>&emsp;例如，左表中框起來的爲各議題下的與議題詞庫匹配且算出的綜合加權值最大值，我們將它們視爲該文章與各個議題的關聯程度，即分類器的分類依據。兩者的關係爲越大越相關，因此文章將會被歸入綜合加權值最大的那個議題。</p>
+												</div>
+												<hr />
+												<div>
+												<h4>A<sub>1</sub>+ B<sub>2</sub>& A<sub>2</sub>+ B<sub>2</sub></h4>
+												<img src="images/A1B2.png" alt="" /  height="300" width="600">
+												<img src="images/A2B2.png" alt="" /  height="300" width="600">
+												<p>&emsp;
+												這一階段主要是利用分類器把測試資料進行分類，並判斷分類的效果。B<sub>2</sub> 方法指的是分類一篇新進文章時 , 選擇每個議題下綜合加權值的總和作為該議題的分類依據，我們將選取其中最大的判定為新進文章的議題。</p>
+												<p>
+												<span class="image left"><img src="images/sum.png" alt="" /  >
+												</span>	
+												<br><br><br>&emsp;左表中框起來的爲各個議題下與議題詞庫匹配的詞的綜合加權值總和，我們將它們視爲該文章與各個議題的關聯程度，即分類器的分類依據。與B<sub>1</sub>方法不同在於：B<sub>1</sub>是選擇各個議題下最大的那個，而B<sub>2</sub>則是將各個議題下所有的值加總。兩者的關係也爲越大越相關，因此文章將會被歸入綜合加權值總和最大的那個議題。
+												</p>
+												</div>
+												<hr />
+												<div>
+												<h4>A<sub>1</sub>+ B<sub>3</sub>& A<sub>2</sub>+ B<sub>3</sub></h4>
+												<img src="images/A1B3.png" alt="" /  height="300" width="600">
+												<img src="images/A2B3.png" alt="" /  height="300" width="600">
+												<p>&emsp;
+												B<sub>3</sub>方法與B<sub>2</sub>類似，具體爲：在完成議題分類後，將引入基因演算法(Genetic Algorithms,GA)作為一種獎勵機制。即在評價分類結果的好壞時，若機器所得出結果更佳，用於產生這個結果的數據的權重越大。我們希望藉此調整權重，以提高分類準確率。</p>
+												</div>
+										</div>
+										
+									
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>實習期間完成進度</h3>
+									<p>&emsp; 
+									已完成實驗，現在正在整合結果，與使用其他方法進行分類、比較結果。
+									</p>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>學習</h3>
+									<li><a href="#ga">基因演算法(Genetic Algorithms)</a></li>
+											<li><a href="#TextRank">TextRank</a></li>
+											<li><a href="#F-measure">F-measure</a></li>
+											<li><a href="#vbi">維特比算法</a></li>
+											<li><a href="#crossvalidation">交叉驗證</a></li>
+											
+											
+									<div id="ga"  style="padding:10px">
+											<h4>基因演算法(Genetic Algorithms)</h4>
+											<h5>a.什麼是GA</h5>
+												<p>	&emsp;
+												基因演算法（Genetic Algorithms ，GA）是一種基於自然選擇和遺傳進化的自適應啓發式搜索算法（ adaptive heuristic search algorithm ）。GA能在已知條件很少的情況下得到最佳解。是一種非常通用的算法，常被應用在各種最佳化問題上。（Sivanandam et al., 2007）
+												</p>
+												<p>	&emsp;
+												GA源自於自然界中"物競天擇，適者生存"的特性，模擬生物間的競爭，倖存者得以繁衍下一代的觀念。達爾文在進化論中將這種規則命名爲“進化”與“適者生存”。應用於最佳化問題的GA，由J.H. Holland 在1875年發表，其運作方式完全模擬了生物在自然中的進化。（Sivanandam et al., 2007）
+												</p>
+												<h5>b.GA與其他最佳化方法對比</h5>
+												<p>	&emsp;
+												Pietramala等人(2008)認為貪心算法的運算效率雖高於GA，但GA的所得出的答案更接近最佳解。本研究中，調整權重的步驟僅用於驗證步驟後的權重調整，對正確率的要求高於效率，因此本研究使用GA。
+												</p>
+												<p>	&emsp;
+												圖爲GA實做的主要程式碼。
+												</p>
+												<img src="images/gaimplement.png" height="800" width="900" />
+												
+										</div>
+										<div id="crawler"  style="padding:10px">
+											<h4>TextRank</h4>
+											<h5>a.什麼是TextRank?</h5>
+												<p>	&emsp;
+												TextRank應用了一種類似谷歌的PageRank(Brin and Page, 1998)和Kleinberg’s HITS algorithm(Kleinberg, 1999) 的一種基於圖的排序法（Graph-based ranking algorithms），並將其用於文本處理。
+												</p>
+												<p>	&emsp;
+												TextRank的產出為：能代表文章詞的集合或句子。其中，詞的集合的數量可人工由文章長度決定。詞的集合將會被當做頂點放入圖中，計算出重要性，並依次排序。選出最重要的若干詞作為關鍵詞。
+												</p>
+												<h5>b.基於圖的排序法</h5>
+												<p>	&emsp;
+												TextRank是一種基於圖的關鍵詞萃取方法。基於圖的排序法的原理是：給予每個頂點投票權，當一個頂點與另一個相連時，記作投給那個被鏈接的頂點一票，並通過遞回的方法得到整個圖中每個頂點的票數。其中，頂點票數越高，重要性也越高，而重要性越高的頂點所投的票佔的權重也越大。
+												</p>
+												<p>	&emsp;
+												一般來說,在有向圖G中，G=(V,E)，V代表頂點，E代表邊，E是V  V的子集。給定一個V  ,其中In(V )代表指向V 的頂點的集合，Out(Vi)則代表V 指向的頂點的集合。那麽Vi的分數可以通過下面（如圖三）的公式來進行計算。
+												</p>
+
+												<img src="images/textrank.png" height="200" width="800" />
+												<p>	&emsp;
+												其中d代表阻尼係數，在（0，1）之間取值。
+												</p>
+										</div>
+										<div id="F-measure"  style="padding:10px">
+											<h4>F-measure</h4>
+												<p>	&emsp;
+												F-measure是一種統計量，常被用於評價模型的好壞。
+												</p>
+												<h5>a.準確率（precision,Pr）和召回率（recall,Re）</h5>
+												<p>	&emsp;
+												準確率與召回率源於信息檢索。在文本分類中，準確率代表該類別的文本有多少是正確的；而召回率則表示實際是該類別的本文有多少被正確分類。
+												</p>
+												<p>	&emsp;
+												計算公式爲：
+												</p>
+												<img src="images/prre.png" height="100" width="400" />
+												<p>	&emsp;
+												準確率與召回率也是文本分類中使用最廣泛的指標。(Li , 2011)
+												</p>
+												<h5>b. F-measure</h5>
+												<p>	&emsp;
+												F-measure 是準確率（precision）和召回率（recall）的調和平均數。
+												</p>
+												<p>	&emsp;
+												公式爲：
+												</p>
+												<img src="images/F-measure.png" height="100" width="400" />
+												<p>	&emsp;
+												其中，α∈ [0,1]。當α=1/2時，就是最常用的F<sub>1</sub>-measure 。公式可轉換爲：
+												</p>
+												<img src="images/F1-measure.png" height="100" width="400" />
+												<p>	&emsp;
+												F-measure可被視爲準確率（precision）和召回率（recall）之間的妥協。它只有在兩者都很高的時候才能取到較高的值。(Zhang et al., 2009)
+												</p>
+										</div>
+										<div id="vbi"  style="padding:10px">
+												<h3>維特比算法</h3>
+												<h4>a.什麼是維特比算法</h4>
+													<p>		&emsp;維特比算法是一個特殊但應用最廣的動態規划算法，利用動態規劃，可以解決任何一個圖中的最短路徑問題。而維特比算法是針對一個特殊的圖——籬笆網絡的有向圖（Lattice )的最短路徑問題而提出的。它之所以重要，是因為凡是使用隱含馬爾可夫模型（HMM）描述的問題都可以用它來解碼，包括今天的數字通信、語音識別、機器翻譯、拼音轉漢字、分詞等。
+													</p>
+													
+													<h4>b.什麼是籬笆網絡</h4>
+													<p>		&emsp;
+													籬笆網絡有向圖的特點是同一列節點有多個，並且和上一列節點交錯地連接起來。同一列節點代表同一個時間點上不同的狀態的並列，大概因為這種一列一列整齊的節點和交錯的邊很像籬笆而得名。
+													
+													<span class="image left"><img src="images/libawang.jpg" height="300" width="600" /></span>
+													<br>假設左圖每一列分別有n<sub>1</sub>……n<sub>n</sub>個節點，如果不使用動態的話，那麼計算複雜度就是O(n<sub>1</sub>×n<sub>2</sub>×⋯n<sub>n</sub>)。(下圖爲籬笆網路)
+													
+													</p>
+													
+													<h4>c.使用遞歸降低複雜度</h4>
+													<p>		&emsp;
+													在動態規劃中，若在時刻t通過一條路徑爲最優路徑，那麼這一路徑從節點i<sub>t</sub>到終點i<sub>T</sub>的部分路徑，對於所有從節點i<sub>t</sub>到終點i<sub>T</sub>可能的路徑來說都爲最佳路徑。若非如此，那麼從i<sub>t</sub>到i<sub>T</sub>就會有一條更好的部分路徑存在，如果它和從i<sub>t</sub>到i<sub>T</sub>的部分路徑連起來，就會形成一條比原來路徑更優的路徑，這是矛盾的。根據這一原理，我們只需從時刻t=1開始，遞推地計算到t=i時的最優路徑，直至t=T，就可找到最優路徑的各個節點，即可求得最優路徑。
+													</p>
+										</div>
+										<div id="crossvalidation"  style="padding:10px">	
+												<h3>交叉驗證</h3>
+												<p>		&emsp;
+												交叉驗證（Cross Validation）是用來驗證分類器的性能一種統計分析方法，基本思想是把在某種意義下將原始數據（dataset）進行分組，一部分做為訓練集（training set），另一部分做為驗證集（validation set），首先用訓練集對分類器進行訓練，在利用驗證集來測試訓練得到的模型（model），以此來做為評價分類器的性能指標。
+												</p>
+												<h4>a.簡單交叉驗證</h4>
+												<p>		&emsp;
+												隨機地將已給資料分成兩部分，一部分作爲訓練集，另一部分作爲測試集。然後用訓練集各種條件下訓練模型，從而得到不同的模型；再利用測試集評價各個模型的測試誤差，選出測試誤差最小的模型。
+												</p>
+												<h4>b.K摺交叉驗證（K-fold cross validation）</h4>
+												<p>		&emsp;
+												K摺交叉驗證（K-fold cross validation）將原始數據隨機切成K組，將每個子集數據分別做一次驗證集，其餘的K-1組子集數據作為訓練集，這樣會得到K個模型。最後選出K次評測中測試誤差最小的模型。
+												K摺交叉驗證可以有效的避免過學習以及欠學習狀態		的發生，最後得到的結果也比較具有說服性。
+												</p>
+												<h4>c.留一交叉驗證</h4>
+												<p>		&emsp;
+												如果設原始數據有N個樣本，那麼留一交叉驗證就是N摺交叉驗證（K=N），即每個樣本單獨作為驗證集，其餘的N-1個樣本作為訓練集，所以留一交叉驗證會得到N個模型，用這N個模型最終的驗證集的分類準確率的平均數作為此下留一交叉驗證分類器的性能指標。相比於前面的K摺交叉驗證，留一交叉驗證有兩個明顯的優點：
+												</p>
+												<p>		&emsp;
+												（1）	每一回合中幾乎所有的樣本皆用於訓練模型，因此最接近原始樣本的分佈，這樣評估所得的結果比較可靠。
+												</p>
+												<p>		&emsp;
+												（2）實驗過程中沒有隨機因素會影響實驗數據，確保實驗過程是可以被複製的。但留一交叉驗證的缺點則是計算成本高，因為需要建立的模型數量與原始數據樣本數量相同，當原始數據樣本數量相當多時，留一交叉驗證在實作上便有困難幾乎就是不顯示，除非每次訓練分類器得到模型的速度很快，或是可以用並行化計算減少計算所需的時間。
+												</p>
+										</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>自我評估及心得感想</h3>
+									<p>&emsp;這一段時間的校內實習讓我學到了很多。專題製作之於上課學習，更要求自學與自我解決問題的能力。在專題製作過程中，常會遇到一些不可預期的狀況，這些問題難以憑藉過去的學習解決。想要解決，可通過在網路上查閱文獻、參考他人過去的做法與經驗，並加以思考，由此接近問題的答案。
+									且在實習的過程中，更要求能把過去學過的知識融會貫通，因爲實際存在的問題不會只在一個面向
+									。</p>
+									
+								</div>
+							</section>
+
+						
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>元智大學資訊管理學系
+第二十二屆專業實習報告（1052學期）/陳曄</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,945 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>翻牌小游戏</title>
+<link href="styles/matchgame.css" rel="stylesheet">
+<h1><center>翻牌小遊戲</center></h1>
+<center>說明：翻出兩個程度相近的詞就能組成一對哦！</center>
+<a href="..\index.htm">
+<img border="0" src="images\back.png" alt="back" width="80" height="80" style="position:relative; margin-top:-200px; margin-left:900px"></a>
+
+</head>
+
+<body>
+
+<script type="text/javascript" src="scripts/htm5game.matchgame.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+
+<section id="game">
+    <div id="cards">
+        <div class="card">
+            <div class="a" id="0">
+                <img src="images/43_副本.jpg" />
+            </div>
+            
+            <div class="b" id="1">
+                <img src="images/22_副本.jpg"/>
+            </div>
+            
+            <div class="c" id="2">
+                <img src="images/15_副本.jpg"/>
+            </div>
+            
+            <div class="d"id="3">
+                <img src="images/25_副本.jpg"/>
+            </div>
+            
+            <div class="e" id="4">
+                <img src="images/29_副本.jpg"/>
+            </div>
+            
+            <div class="f" id="5">
+                <img src="images/34_副本.jpg"/>
+            </div>
+            
+            <div class="g" id="6">
+                <img src="images/32_副本.jpg"/>
+            </div>
+            
+            <div class="h" id="7">
+                <img src="images/12_副本.jpg"/>
+            </div>
+            
+            <div class="i" id="8">
+                <img src="images/24_副本.jpg"/>
+            </div>
+            
+            <div class="j" id="9">
+                <img src="images/37_副本.jpg"/>
+            </div>
+            
+            <div class="k" id="10">
+                <img src="images/28_副本.jpg"/>
+            </div>
+            
+            <div class="l" id="11">
+                <img src="images/18_副本.jpg"/>
+            </div>
+            
+            <div class="m" id="12">
+                <img src="images/31_副本.jpg"/>
+            </div>
+            
+            <div class="n" id="13">
+                <img src="images/21_副本.jpg"/>
+            </div>
+            
+            <div class="o" id="14">
+                <img src="images/41_副本.jpg"/>
+            </div>
+            
+            <div class="p" id="15">
+                <img src="images/35_副本.jpg"/>
+            </div>
+            
+            <div class="q" id="16">
+                <img src="images/16_副本.jpg"/>
+            </div>
+            
+            <div class="r" id="17">
+                <img src="images/38_副本.jpg"/>
+            </div>
+            
+            <div class="s" id="18">
+                <img src="images/19_副本.jpg"/>
+            </div>
+            
+            <div class="t" id="19">
+                <img src="images/42_副本.jpg"/>
+            </div>
+            
+            <div class="u" id="20">
+                <img src="images/11_副本.jpg"/>
+            </div>
+            
+            <div class="v" id="21">
+                <img src="images/44_副本.jpg"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    
+    var cardArray = new Array();
+    
+    a=new Object()
+    a.num=0
+    a.src="images/43_副本.jpg"
+    a.back="images/4.3_副本.jpg"
+    a.v=5.5
+    a.a=1.8
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=1
+    a.src="images/22_副本.jpg"
+    a.back="images/2.2_副本.jpg"
+    a.v=2.2
+    a.a=6.0
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=2
+    a.src="images/15_副本.jpg"
+    a.back="images/1.5_副本.jpg"
+    a.v=3.1
+    a.a=7.9
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=3
+    a.src="images/25_副本.jpg"
+    a.back="images/2.5_副本.jpg"
+    a.v=3.3
+    a.a=6.9
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=4
+    a.src="images/29_副本.jpg"
+    a.back="images/2.9_副本.jpg"
+    a.v=6.9
+    a.a=5.6
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=5
+    a.src="images/34_副本.jpg"
+    a.back="images/3.4_副本.jpg"
+    a.v=4.3
+    a.a=4.4
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=6
+    a.src="images/32_副本.jpg"
+    a.back="images/3.2_副本.jpg"
+    a.v=5.6
+    a.a=5.0
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=7
+    a.src="images/12_副本.jpg"
+    a.back="images/1.2_副本.jpg"
+    a.v=7.9
+    a.a=7.2
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=8
+    a.src="images/24_副本.jpg"
+    a.back="images/2.4_副本.jpg"
+    a.v=3.3
+    a.a=6.9
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=9
+    a.src="images/37_副本.jpg"
+    a.back="images/3.7_副本.jpg"
+    a.v=7.4
+    a.a=4.5
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=10
+    a.src="images/28_副本.jpg"
+    a.back="images/2.8_副本.jpg"
+    a.v=6.9
+    a.a=5.6
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=11
+    a.src="images/18_副本.jpg"
+    a.back="images/1.8_副本.jpg"
+    a.v=1.8
+    a.a=8.2
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=12
+    a.src="images/31_副本.jpg"
+    a.back="images/3.1_副本.jpg"
+    a.v=5.6
+    a.a=5.0
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=13
+    a.src="images/21_副本.jpg"
+    a.back="images/2.1_副本.jpg"
+    a.v=2.2
+    a.a=6.0
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=14
+    a.src="images/41_副本.jpg"
+    a.back="images/4.1_副本.jpg"
+    a.v=4.1
+    a.a=2.4
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=15
+    a.src="images/35_副本.jpg"
+    a.back="images/3.5_副本.jpg"
+    a.v=4.3
+    a.a=4.4
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=16
+    a.src="images/16_副本.jpg"
+    a.back="images/1.6_副本.jpg"
+    a.v=3.1
+    a.a=7.9
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=17
+    a.src="images/38_副本.jpg"
+    a.back="images/3.8_副本.jpg"
+    a.v=7.4
+    a.a=4.5
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=18
+    a.src="images/19_副本.jpg"
+    a.back="images/1.9_副本.jpg"
+    a.v=1.8
+    a.a=8.2
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=19
+    a.src="images/42_副本.jpg"
+    a.back="images/4.2_副本.jpg"
+    a.v=4.1
+    a.a=2.4
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=20
+    a.src="images/11_副本.jpg"
+    a.back="images/1.1_副本.jpg"
+    a.v=7.9
+    a.a=7.2
+    cardArray.push(a);
+    
+    a=new Object()
+    a.num=21
+    a.src="images/44_副本.jpg"
+    a.back="images/4.4_副本.jpg"
+    a.v=5.5
+    a.a=1.8
+    cardArray.push(a);
+    
+onload=function f(){
+    
+
+    //$("div").append(cardArray[22].back);
+    //$("div").append("<img src=\"" + cardArray[3].src + "\">");
+    //document.getElementById("cards").innerHTML="<img src=\"" + cardArray[3].src + "\">";
+    //document.getElementById("cards").innerHTML="<img src=\"" + cardArray[4].src + "\">";
+        /*var s = "#"+i+"";
+        $(s).click(function(){
+                      document.getElementById(i).innerHTML="<img src=\"" + cardArray[i].back + "\">";                                         })*/
+        //$("div").append("<img src=\"" + cardArray[i].src + "\">");
+        //document.getElementById(i).innerHTML="<img src=\"" + cardArray[i].src + "\">";
+        //var src = cardArray[i].src;
+        //document.getElementById("cards").innerHTML="<img src=\"" + cardArray[i].src + "\">";
+        //$("div").append("<img src="images/4.4_副本.jpg">");
+        //$cardArray.clone().appendTo($("#cards"));
+        //document.getElementById("cards").innerHTML=src;
+        var count = 0;
+        var tempArray = new Array();
+        var time = 700;
+        var dis = 0.00000000001;
+        $("#0").click(function(){document.getElementById(0).innerHTML="<img src=\"" + cardArray[0].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[0]);
+                      if(count == 2)
+                      {
+                      //alert(tempArray[0].a - tempArray[1].a);
+                        setTimeout(function()
+                            {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                   /* document.getElementById(tempArray[0].num).innerHTML="<style>#"+tempArray[0].num+"{opacity:0;}</style>";
+                                    document.getElementById(tempArray[1].num).innerHTML="<style>#"+tempArray[1].num+"{opacity:0;}</style>";*/
+                                   document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                   document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                    document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                    document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                   tempArray.splice(0,2)
+                                   count = 0;
+                                   },time);
+
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#1").click(function(){document.getElementById(1).innerHTML="<img src=\"" + cardArray[1].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[1]);
+                      if(count == 2)
+                      {
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#2").click(function(){document.getElementById(2).innerHTML="<img src=\"" + cardArray[2].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[2]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#3").click(function(){document.getElementById(3).innerHTML="<img src=\"" + cardArray[3].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[3]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#4").click(function(){document.getElementById(4).innerHTML="<img src=\"" + cardArray[4].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[4]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#5").click(function(){document.getElementById(5).innerHTML="<img src=\"" + cardArray[5].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[5]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#6").click(function(){document.getElementById(6).innerHTML="<img src=\"" + cardArray[6].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[6]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#7").click(function(){document.getElementById(7).innerHTML="<img src=\"" + cardArray[7].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[7]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      
+                      });
+        $("#8").click(function(){document.getElementById(8).innerHTML="<img src=\"" + cardArray[8].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[8]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      });
+        $("#9").click(function(){document.getElementById(9).innerHTML="<img src=\"" + cardArray[9].back + "\">";
+                      count++
+                      //alert(count);
+                      tempArray.push(cardArray[9]);
+                      if(count == 2)
+                      {
+                      
+                      setTimeout(function()
+                                 {
+                                 //alert(count);
+                                 if((tempArray[0].a - tempArray[1].a) == 0)
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                 }
+                                 else
+                                 {
+                                 document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                 document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                 }
+                                 tempArray.splice(0,2)
+                                 count = 0;
+                                 },time);
+                      
+                      //alert(tempArray.length);
+                      }
+                      });
+        $("#10").click(function(){document.getElementById(10).innerHTML="<img src=\"" + cardArray[10].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[10]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#11").click(function(){document.getElementById(11).innerHTML="<img src=\"" + cardArray[11].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[11]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#12").click(function(){document.getElementById(12).innerHTML="<img src=\"" + cardArray[12].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[12]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#13").click(function(){document.getElementById(13).innerHTML="<img src=\"" + cardArray[13].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[13]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#14").click(function(){document.getElementById(14).innerHTML="<img src=\"" + cardArray[14].back + "\">";
+                       
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[14]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#15").click(function(){document.getElementById(15).innerHTML="<img src=\"" + cardArray[15].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[15]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a)== 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#16").click(function(){document.getElementById(16).innerHTML="<img src=\"" + cardArray[16].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[16]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#17").click(function(){document.getElementById(17).innerHTML="<img src=\"" + cardArray[17].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[17]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#18").click(function(){document.getElementById(18).innerHTML="<img src=\"" + cardArray[18].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[18]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  
+                                  }
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#19").click(function(){document.getElementById(19).innerHTML="<img src=\"" + cardArray[19].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[19]);
+                       if(count == 2)
+                       {
+                       //alert(Math.sqrt(tempArray[0].a*tempArray[0].a + tempArray[1].a*tempArray[1].a));
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  //alert(Math.sqrt(tempArray[0].a*tempArray[0].a + tempArray[1].a*tempArray[1].a))
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#20").click(function(){document.getElementById(20).innerHTML="<img src=\"" + cardArray[20].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[20]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+        $("#21").click(function(){document.getElementById(21).innerHTML="<img src=\"" + cardArray[21].back + "\">";
+                       count++
+                       //alert(count);
+                       tempArray.push(cardArray[21]);
+                       if(count == 2)
+                       {
+                       
+                       setTimeout(function()
+                                  {
+                                  //alert(count);
+                                  if((tempArray[0].a - tempArray[1].a) == 0)
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].back + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].back + "\">";
+                                  }
+                                  
+                                  else
+                                  {
+                                  document.getElementById(tempArray[0].num).innerHTML="<img src=\"" + cardArray[tempArray[0].num].src + "\">";
+                                  document.getElementById(tempArray[1].num).innerHTML="<img src=\"" + cardArray[tempArray[1].num].src + "\">";
+                                  }
+                                  tempArray.splice(0,2)
+                                  count = 0;
+                                  },time);
+                       
+                       //alert(tempArray.length);
+                       }
+                       });
+
+        
+}
+                       //$("div").append("<img src="images/4.4_副本.jpg">");
+</script>
+
+ <!-- footer -->
+<footer class="section footer">
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="col-md-12">
+        <a>指導老師：禹良治</a>
+        <br>
+        <a>陳一瑞 s1031776  魏亦鑫 s1031677</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer --> 
+</div>
+</body>
+
+</html>

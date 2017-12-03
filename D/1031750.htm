@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>MIS軟體組 - 毛君安</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.gotop').click(function(){
+					var $body = $('html,body');
+					$body.animate({
+						scrollTop: 0
+					}, 600);
+					return false;
+				});
+				$(window).scroll(function() {
+					if ( $(this).scrollTop() > 300){
+						$('.gotop').fadeIn("fast");
+					} else {
+						$('.gotop').stop().fadeOut("fast");
+					}
+				});
+			});
+		</script>
+		
+		<!-- Begin -->
+		<script Language="JavaScript">
+			var max=0;
+			
+			function textlist() {
+				max=textlist.arguments.length;
+				for (i=0; i<max; i++)
+					this[i]=textlist.arguments[i];
+			}
+
+			tl = new textlist( 
+			"	我是管理資訊系統部門(MIS)的軟體組，工作內容是在修改公司內部的網頁系統，或是開發新系統。依照其他部門的資訊需求申請單上面的要求，進行舊有程式的更新，或是從無到有寫出一個完整的系統，讓他們工作可以更加方便，減少過多繁瑣的程序。也是為了因應環保意識的抬頭，減少紙張的浪費，加速電子化的過程，因此現在許多的作業流程都是直接在網路上進行資料的交換。",
+			"	公司系統所使用的語言是HTML加上JavaScript，這是在前端呈現畫面給使用者。而後台則是使用Java語法包含SQL語法，去和資料庫作連結，也使用內容管理系統(CMS)方便管理資料。學校的課程並沒有安排過Java語言，因此上班的第一個月，我都是在熟悉語法。每天閱讀前輩們已經寫好的系統，如有不懂的要地方要標記起來，並詢問他們，也都要記錄已了解哪些程式碼，整理之後在下班前將筆記寄給前輩們，當作工作紀錄。",
+			"	比較常用到的功能是要去資料庫撈資料，並且顯示在頁面上。或是讓使用者上傳附件到伺服器上，其他還有要寄送E-mail給特定人員，或是將查詢到的資料，轉換格式成Excel檔。最近學到的新功能是：歷程紀錄，紀錄哪個使用者在什麼時間對哪一筆資料做什麼樣的處理，例如：新增、修改和刪除。因為同一筆資料要經過很多人員的確認，也避免有人誤刪資料，卻不自覺。以及合併PDF檔，讓最後主管們要審核資料時，只需下載一個附件檔就好。",
+			"	暑假期間的工作則有資料庫轉換，所以要測試資料有無異常。以及開發一個新系統，它的功能是每天去總公司的資料庫將需要的資料同步到南平廠。而之前上線的系統，經過使用者的操作之後，更新程式以改善他們提出的問題，提高他們工作的效率。程式修改完成後，操作手冊也要跟著更新，方便使用者操作更新後的系統。而有些系統是在PDA上面操作，則需要修改程式顯示的介面，以符合螢幕大小。",
+			"   開學後到現在最主要的工作內容仍然是在寫程式。這次，使用者提出的需求是：在系統登入時先檢查使用者的身份，再根據身份開放不同的權限。例如：一般使用者不能修改文件的內容，因此在使用者下載附件前，須先將檔案轉換成PDF檔。這功能是以前沒有學習過的，所以我先上網查詢其他人提供的範本並研究且試著自行操作。前輩提供了一個大方向給我，但是研究那方法花了我將近一個星期的時間，效果卻不是很理想。最後是使用JAVA程式，加上Microsoft Office的外掛程式，才能夠順利的將word檔完全的轉換成PDF檔。之後的步驟就很熟悉了，拉出畫面，顯示查詢結果，點擊附件自動轉換成PDF檔。"
+			);
+
+			var x = 0; pos = 0;
+			var l = tl[0].length;
+			
+			function textticker() {
+				document.tickform.tickfield.value = tl[x].substring(0, pos) + "_";
+				if(pos++ == l) {
+					pos = 0; 
+					setTimeout("textticker()", 2000&2001); 
+					if(++x == max) x = 0; 
+						l = tl[x].length;
+				}else
+					setTimeout("textticker()", 150);
+			}
+		</script>
+		<!-- End -->
+	</head>
+	
+	<body class="subpage"  OnLoad="textticker()">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.htm">首頁</a></li>
+					<li><a href="1031705.htm">MIS硬體組-姜伯儒</a></li>
+					<li><a href="1031722.htm">MIS硬體組-梁興乾</a></li>
+					<li><a href="1031750.htm">MIS軟體組-毛君安</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<header class="align-center">
+								<h1>軟體組 1031750毛君安</h1>
+							</header>
+							<!-- 2 Columns -->
+							<div class="flex flex-2" >
+								<div class="col col1 first">
+									<div class="image round fit">
+										<img src="images/model.jpg" alt="" />
+									</div>
+								</div>
+								<div class="col col2" style="background-color:white;">
+									<h3><font color="black">工作內容介紹</font></h3>
+									<form name=tickform><textarea name=tickfield rows=5 style="background-color: rgb(255,255,255); color: rgb(0,0,0); cursor: default; font-size: 5; border: none;"></textarea></form>
+								</div>
+							</div>
+						</div>
+					</section>
+				
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<div class="flex flex-3">
+								<h3>實習期間完成進度</h3>
+								<!-- Begin -->
+								<script Language="JavaScript">
+									document.write('<marquee id="iescroller" direction="up" scrollamount="2" scrolldelay="100" style="border:3 solid #025B75;">');
+									iescroller.onmouseover=new Function("iescroller.scrollAmount=0");
+									iescroller.onmouseout=new Function("iescroller.scrollAmount=2");
+
+									document.write('<font size="5" color=black>')
+									document.write('<Div align="center">1.新增匯出EXCEL功能</div>');
+									document.write('<Div align="center">2.新增性向測驗功能</div>');
+									document.write('<Div align="center">3.建立PVT文件查詢系統</div>');
+									document.write('<Div align="center">4.建立排程維護功能系統</div>');
+									document.write('<Div align="center">5.建立生產看板系統</div>');
+									document.write('<Div align="center">6.新增歷程紀錄</div>');
+									document.write('<Div align="center">7.測試資料庫</div>');
+									document.write('<Div align="center">8.修改PVT文件查詢系統、更新使用手冊</div>');
+									document.write('<Div align="center">9.新增排程功能</div>');
+									document.write('<Div align="center">10.修改出貨排程系統</div>');
+									document.write('<Div align="center">11.更新CKD & WMS系統、更新使用手冊</div>');
+									document.write('<Div align="center">12.修改備料盤點表格式</div>');
+									document.write('<Div align="center">13.修改工時系統</div>');
+									document.write('<Div align="center">14.建立KM查詢系統</div>');
+									document.write('<Div align="center">15.修改機種貼紙查詢系統</div>');
+									document.write('<Div align="center">16.建立SFIS客戶查詢系統</div>');									
+									document.write('</font>');
+									document.write('</marquee>');
+								</script>
+								<!-- End -->
+							</div>
+						</div>
+					</section>
+					
+				<!-- Section -->
+					<section class="wrapper">
+						<div class="inner">
+							<h3>學習 - 運用Java + SQL + HTML + JavaScript + JQuery 寫系統</h3>
+							<!-- Begin -->
+								<script Language="JavaScript">
+									document.write('<marquee id="iescroller" direction="down" scrollamount="2" scrolldelay="100" style="border:3 solid #025B75;">');
+									iescroller.onmouseover=new Function("iescroller.scrollAmount=0");
+									iescroller.onmouseout=new Function("iescroller.scrollAmount=2");
+
+									document.write('<font size="5" color=black>')
+									document.write('<Div align="center">查詢資料並顯示在頁面上</div>');
+									document.write('<Div align="center">查詢條件一定要有值</div>');
+									document.write('<Div align="center">點擊按鈕開啟行事曆</div>');
+									document.write('<Div align="center">查詢條件需傳回頁面</div>');
+									document.write('<Div align="center">點擊按鈕匯出EXCEL</div>');
+									document.write('<Div align="center">匯出EXCEL並附件於E-mail</div>');
+									document.write('<Div align="center">根據不同分類分隔多個sheet</div>');
+									document.write('<Div align="center">根據下拉式選單的值，鎖定其他欄位，或是自動帶入資料</div>');
+									document.write('<Div align="center">歷程紀錄</div>');
+									document.write('<Div align="center">合併PDF</div>');
+									document.write('<Div align="center">新增資料至資料庫</div>');
+									document.write('<Div align="center">查詢資料庫後顯示為下拉式選單的選項</div>');
+									document.write('<Div align="center">點擊按鈕時，先將word轉換成PDF再下載</div>');						
+									document.write('</font>');
+									document.write('</marquee>');
+								</script>
+							<!-- End -->
+						</div>
+					</section>
+					
+					
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<h3>自我評估及心得感想</h3>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;從實習開始到現在已經過了三個多月，過去的一百多天裡，除了實習還有上課，感覺生活不斷被這兩件事情重複追著跑，難得放假的星期日只想躺在床上什麼事情都不想做。雖然很累，卻過得很充實。從一開始會擔心自己需要多久的時間才能適應一個新的環境，也會擔心自己能力的不足。到現在已經習慣這樣的生活，八點打卡上班，五點不一定準時下班。在公司工作真的很不一樣，短短的三個月，程式設計的能力卻好像比學校一年所學的還多，每天都有不一樣的任務，每天都學到不一樣的方法去解決使用者的問題，上班的每一天都很期待中午休息時間…</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;現在的我，只是個小小實習生，能力有限，像個海綿一樣，每天吸收不同的東西，不斷的膨脹。工作三個月，請實習公司的主管們填寫問卷，藉著這個機會，看看他們對我的評價是什麼，有哪裡需要改進的地方，接下來還有四分之三的合約，而未來是未知數。</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;時間過的真的很快，不知不覺來到技嘉已經七個多月了，對於一邊上課一邊實習的過程，已無過多的感覺。聽到同學們在不同公司上班，而有不同的心得，反而還覺得有趣，也深深地感受到大家的成長。從前不曾有交集的同學，也因為在同一間公司上班，才有機會更認識他們。</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到目前為止，幾乎所有的工作內容都是在更新程式或是建立新系統。而系統主要的功能都是使用者輸入條件後，傳回資料並顯示於頁面上。雖然工作內容好像都相同，但是根據不同使用者的需求，程式都會附加不一樣的功能。因此，即使每次的工作項目都是查詢，然後顯示結果，仍然會有不懂的地方需要學習。畢竟，學校所學只是入門。而那些知識是學不完的，正所謂學海無涯，尤其在現今這資訊流通如此快速的時代，加上我所在的行業正好是資訊產業，每天都有功能推陳出新。如果不能讓自己跟上這潮流，是很容易被社會淘汰的。</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以往，我的工作項目都是主管和使用者討論過系統的需求後，才分配工作內容給我。而前些時候，帶領我的工程師因家中有事，請假了一陣子。因此，當使用者發現程式有什麼需要修改的地方時，就會直接寫E-mail給我，這是以往不曾有過的。</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;實際來到公司上班，才能體會賺錢的辛苦，以及職場上那些不能說，大家卻都照做的淺規則，這也算是另外一種收穫吧，我想。</p>
+						</div>
+					</section>					
+					
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<p>&copy; All rights reserved. Design: <a href="https://templated.co">TEMPLATED</a></p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+		<!--BACKtoTOP-START-->
+		<a href="#banner" title="" onFocus="if(this.blur)this.blur()" class="gotop" style="position:fixed;bottom:5px;right:5px;"><img alt='' border='0' src="images/upicon.png"></a>
+
+	</body>
+</html>

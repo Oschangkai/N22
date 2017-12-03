@@ -1,0 +1,412 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>林佳蒼實習網頁</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-book"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>研究主題：文字探勘</h1>
+								<p><b>姓名：林佳蒼</b></p>
+								<p><b>學號：1031728</b></p>
+								<p><b>指導教授：李怡慧</b></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#work">工作內容</a></li>
+								<li><a href="#learning">學習</a></li>
+								<li><a href="#Feedback">自我評估及感想</a></li>
+								<li><a href="#Suggest">對系上的建議</a></li>
+								<li><a href="../index.htm">回前頁</a></li>								
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="work">
+								<h2 class="major">工作內容</h2>
+								<h3>(1) 前言</h3>
+								<p>我們正式報到的時間為二月二號，剛開始主管先帶我們認識了一下中心後，並告訴我們，我們會要先各自交接一項工作項目，待項目完成了之後，還有機會能做自己想做的主題。因此給了我們一些時間思考自己想要進行的項目。在這期間，我們四位實習生把自己的電腦設置好、安裝完作業系統後，就開始四處尋找資料，我們能交接的三項工作項目分別為 : 影像處理、網頁開發、跟文字探勘，目前各有一個學長在負責。學長先介紹了他們的工作內容、需要的技能、使用的程式語言、可能會用到的套件、所需具備的知識等……。我們就先尋找自己感興趣的部分。在影像處理部分，需要先具備一定的圖學知識後，運用python及openCV等進行程式開發，並有運用到機器學習的技術進行圖像辨識。網頁開發部分，目前正在開發一項網頁標註工具，運用到IIIF及web annotation data model並運用Java script進行開發。而文字探勘，則運用到python、java程式語言，Word2Vec機器學習技術等。我們運用兩周左右的時間決定各自要交接的部分，期間有場全中心的會議，讓我們了解整個中心有多少專案，及整個數位文化中心的架構，且為了避免我們不知從何著手，有位學長出了有關資料處理的題目，供我們練習，運用到shellscript及java，由於難度有點高，我們並沒有全部完成。兩位資工實習生交接資工學長影像處理的部分，同樣是資管的同學鄭雲修交接資管學長的網頁開發，而我交接的是另一位資工學長文字探勘的部分。
+									</p>
+									<p>到了暑假，工作大致上都步入正軌，我持續進行文字探勘的工作，順便也和其他的工讀生互相了解一下對方的工作，不只如此，也在中央研究院獲得很多聽演講的機會，或者是在進行中心會議時，能了解數位文化中心在做什麼、也聽正職的員工分享許多知識。
+另外，組長幫我們購買了一些自然語言處理、機器學習、資料視覺化等書籍，讓我們研讀。開學之後便參與數位人文工具功能的開發，我負責的部分為全文專業檢索的部分。
+</p>
+								<h3>(2)工作內容</h3>
+								<p>交接完後一兩個星期我都在練習java，稍稍熟悉了之後主管給了我幾萬筆資料，是外面廠商的一些文本資料要我和數位文化中心的資料庫進行比對。資料內容為一關鍵詞、及關鍵詞前後的十五個字，我的工作則是比對資料與資料庫中文本的異同之處。由於資料庫存放的是一段一段的文本我必須從文本中找出關鍵字，再擷取出關鍵詞前後之十五個字，接著才能進行比對。除了比對之外還要列出文本的書名、段落及關鍵字是否配對成功，看似很簡單的文本比對，其實需要透過許多繁複的步驟，且也有許多的例外。首先是讀取文本，由於不清楚外面廠商是如何產生這些資料，因此也就無法確定廠商是如何取前後十五字的，那些資料出現了缺少前後十五字、十五字中包含特殊符號、超過指定字數等例外狀況，各個狀況都要一一處理。再來是從資料庫擷取文本，由於資料庫存放的並非單純的書籍內文，還包含著專家和學者的註解及一些xml標籤，因此需要處理過才能作後續的動作。處理完許許多多的例外之後即可開始進行比對。透過資料庫查詢語法取得包含有關鍵詞的前50筆資料，再從各筆資料擷取關鍵詞的前後十五個字比對它與廠商給的資料的符合程度，此時又產生一個問題，在同個文本中有可能出現兩次以上的關鍵詞，也就代表我必須對同個文本進行多次以上的搜尋，才能比對出最正確的結果。剛開始我是以逐字比對的方式得到一個分數代表其符合程度，可是發現這種方法效果並不理想，後來經由主管建議研究最長共同子序列 (Longest Common Subsequence) 並使用主管給我的一個比對程式運用史密斯-沃特曼演算法(Smith-Waterman algorithm)來產生比對分數，此時的結果就趨近於我們所想要的結果。完成了文本比對之後，主管接著給了我下一份工作。</p>
+								<p>這份工作是文本分析，我們處理的文本皆屬於文言文，由於我們並不具備透過直接觀看文本來得知那些詞語或詞句是重要的，因此得透過程式分析。以自己設定的條件去產出一些結果並在之後交由專業學者去判斷其結果之效用。我們最終的目的是找出文本內重要的詞句或重要的結構，例如：法規條文、公文皆有他們的書寫結構。我目前在做的是嘗試找出重要詞句。我的處理流程為：取得文本後我們以標點符號斷句，以每一個句子當成一個關鍵詞句組成全文的斷句陣列，由於句子可能重複所以我將重複的句子去除產生關鍵字陣列，接著進行交互比對。我們認為長度三到八的詞語應當最具有意義，因此只產出關鍵字長度為三至八的結果。至於比對方式，我將以關鍵字為基準取出頭尾相同，中間可能有差異的詞語，並計算其出現頻率。例如：
+Keyword = 三十年 Result = 三千年 三百年 三十年。
+而要找出差異，本來我是使用上述的LCS，可是並無法準確的取得長度正確的詞語，所以改用Google開發的google-diff-match-patch套件。完成了交互比對之後，要做的就是將結果進行篩選，因為當關鍵詞出現相似的詞例如：十二年、十七年等，結果就會被重複計算。而我衡量詞與重要性的方法是以熵(entropy)的方式。最後將所有結果輸出至資料庫以供查詢，包含關鍵詞、出現頻率、及與類似詞語合併計算的熵。完成了重點詞句的比對，之後便是處理長度較長的句子，處理流程一樣如上圖，有差異的部分是產生關鍵字陣列的部分。我並非是取整個句子為一關鍵詞，而是以特定長度每次橫移一個字產生所有這個句子可能產生的詞語例如：
+</p><span class="image main"><img src="images/pic01-18.png" alt="" /></span><p>(N-gram斷詞)</p><p>再重複做一次同樣的流程。</p>
+								<p>從暑假開始的工作，首先是幫撰寫一個關鍵字的標註工具(LabelEditer)，除了他們提供的需要標記的範本外，工具也要能讓其他人使用，工具的架構如下圖，由於中文文本沒有固定格式、儲存標記的格式也不定，大多數時候必須額外撰寫一個處理程式(Parser)來對檔案進行處理，工具只要輸入需要標記的句子、及標記的內容，便會自動從句子中找出需要標記的位置並完成標記。接下來會以主管們提供的範例進行講解。
+								<span class="image main"><img src="images/pic01-1.png" alt="" /></span><p>(標記工具架構)</p>
+								<p>主管提供的範例檔案有三項：要進行標註的文本、標註的統整檔、及標註檔，文檔內容部分如下圖：</p>
+								<span class="image main"><img src="images/pic01-2.png" alt="" /></span><p>(要進行標註的文本)</p>
+								<span class="image main"><img src="images/pic01-3.png" alt="" /></span><p>(標註統整檔)</p>
+								<span class="image main"><img src="images/pic01-4.png" alt="" /></span><p>(標註檔及要進行標註的文本後方的書籍編號)</p>
+								<p>三個文檔可以進行對應，透過統整檔的標註檔編號可以找到標註檔，透過標註檔的書籍編號可以找到要進行標註的文本。文本的處理流程圖如下：</p>
+								<p>完成了文本比對之後，主管接著給了我下一份工作。
+									這份工作是文本分析，我們處理的文本皆屬於文言文，由於我們並不具備透過直接觀看文本來得知那些詞語或詞句是重要的，因此得透過程式分析。以自己設定的條件去產出一些結果並在之後交由專業學者去判斷其結果之效用。我們最終的目的是找出文本內重要的詞句或重要的結構，例如：法規條文、公文皆有他們的書寫結構。我目前在做的是嘗試找出重要詞句，以下為我的處理流程：</p>
+								<span class="image main"><img src="images/pic01-5.png" alt="" /></span><p>(標記流程圖)</p>
+								<p>先如上述將三個文本進行對應之後，找出各文本需要標註的所有內容，並從文本中找出各標註檔的位置進行先後排序，為確認標註為正確的，有進行標註詞前後十五個字的認證，後送入標註工具進行標註。此外，出現了一些問題造成標註檔未能正確標註，原因大致分為兩個，首先是文本中或標註檔中出現不明的空白、或自動將空白忽略，由於空白亦算為一個字元，因此會出現標註失敗的情形、而第二個情形就是有時標註檔會出現重複標註的情形，因此就會有幾筆標註未進行重複標註如下圖：</p>
+								<span class="image main"><img src="images/pic01-6.png" alt="" /></span><p>(重複標註範例)</p>
+								<p>再重複做一次同樣的流程。而最近主管提出了新的長句處理方法，未來我將繼續完成這項工作。可以看到上面兩筆標註檔前後十五字皆為相同的，然而在不同的標註編號裡，為重複標住的情形。
+									接著主管要我撰寫另一個工具 – 書籍目錄工具，輸入的資料為一個個書本目錄，要應著輸入資料產出書本的樹狀結構，範例如下：</p>
+								<span class="image main"><img src="images/pic01-7.png" alt="" /></span><p>(書本目錄的輸入資料)</p>
+								<span class="image main"><img src="images/pic01-8.png" alt="" /></span><p>(欲產生之樹狀結構)</p>
+								<p>首先在網路上尋找到一個別人撰寫好的工具，由於主要是要應用而已，非必要自己撰寫，我在知名網路論壇Stackoverflow上找到一個別人撰寫好的樹狀結構工具，然而再進行應用時遭遇到一些問題，為求程式效率，他在樹的結構撰寫上是以Hashmap進行撰寫，導致若目錄有重複的標題，樹狀結構便會出現錯誤：</p>
+								<span class="image main"><img src="images/pic01-9.png" alt="" /></span><p>(重複的目錄名稱)</p>
+								<p>因此我嘗試自己撰寫書籍目錄工具，同時還要處理重複目錄名稱的問題，我設計的目錄樹物件結構如下：</p>
+								<span class="image main"><img src="images/pic01-10.png" alt="" /></span><p>(目錄樹物件結構)</p>
+								<p>程式的結果如下圖：</p>
+								<span class="image main"><img src="images/pic01-11.png" alt="" /></span><p>(目錄物件範例)</p>
+								<p>圖的左邊為輸入資料，右邊為產生之結果首先可以看到「卷之一」為最上層，且「雍正十三年八月」為下一層，再下一層則為「23日」、「24日」、「25日」，因此在便會以圖右方的形式儲存，其中Occurrence為出現次數，後來主管說這個工具的效率可能需要改進，然而當時剛好有新的工讀生來就職，後來就交由另一位同事進行開發。
+									不久後，中研院舉辦幾場資訊處理及機器學習的講座，其中的部分匯流到學習的部分做講解，之後的工作是要寫個N-gram的詞頻統計程式，輸入兩個詞、兩詞之間的距離、兩詞是否排序及搜尋欄位即可從文本中將兩個詞之間的所有文字，以N-gram進行斷詞之後，統計個詞語的出現次數並從高到低排列出來，範例如下圖：</p>
+								<span class="image main"><img src="images/pic01-12.png" alt="" /></span><p>(詞頻統計的輸入資料)</p>
+								<span class="image main"><img src="images/pic01-13.png" alt="" /></span><p>(兩關鍵字之間的文字以2-gram斷詞的結果)</p>
+								<p>上述的工具是要應用於數位文化中心所建構的數位人文平台，裡面有個專業查詢的功能，介面如下圖：</p>
+								<span class="image main"><img src="images/pic01-14.png" alt="" /></span><p>(查詢介面)</p>
+								<p>透過上面的詞頻統計程式便會在查詢完文本時，在N-gram欄位中顯示其結果：</p>
+								<span class="image main"><img src="images/pic01-15.png" alt="" /></span><p>(結果頁面顯示)</p>
+								<p>網頁與程式的結合也是由我進行撰寫。除了N-gram外，文本的檢索功能也是由我進行開發，此查詢功能相較於基本的關鍵字查詢，強調透過前後綴詞來找尋詞語間的關聯，透過多文本比對、前後綴夾擠詞語的N-gram分析等功能，為使用者提供文本資訊，方便使用者進行研究。</p>
+								<p>正規表示式是一個很強大的比對方法，透過符號的結合，即可完成極為複雜的文字比對，然而對於不熟悉的人來說，正規表示式並非一個亦於上手的查詢方式，需要一個介面來方便使用者進行具有彈性的全文檢索，讓查詢更為精確，避免不直觀且複雜的操作。因此，此查詢功能盡量貼近正規表示式所能達到的複雜查詢，並透過簡易的查詢介面呈現。</p>
+								<p>在呈現查詢結果時有查詢關鍵字標記的功能，其功能如下圖所示：</p>
+								<span class="image main"><img src="images/pic01-19.png" alt="" /></span><p>(關鍵字標記)</p>
+							</article>
+
+						<!-- Work -->
+							<article id="learning">
+								<h2 class="major">學習</h2>
+								<h3>(1) Python</h3>
+								<p>Python是一款物件導向的直譯式語言，包含完備的函式庫，能輕鬆的完成常見的工作。它的語法簡單，透過縮牌來定義區塊。Python的創始人為Guido van Rossum，它對Python的定義是「優雅」、「明確」、「簡單」，適合用於處理單件事物。在剛進入公司時，學長推薦我們可以嘗試學習Python，透過Codecademy網站的練習，很快的懂得如何撰寫Python程式語言。它寫起來真的如創始人所描述的簡單及優雅，由於要求縮排，因此Python的程式碼寫起來即是整整齊齊的，它拿掉了傳統的括號及分號，避免了許多因人為疏失而產生的意外。也不需要對變數進行宣告，正因為不需要宣告，對變數的處理就要更加小心，避免發生不預期的錯誤。資工系學長所研究的影像辨識就是使用Python的程式與openCV輔助套件。</p>
+								<h3>(2) Java</h3>
+								<p>Java是一款在學校未曾接觸的程式語言，它的風格十分接近C與C++，繼承了C++物件導向技術的核心，捨棄容易引發錯誤的指標功能。由James Gosling所設計。它具有跨平台、泛型程式設計的特性使他被廣泛印用於Web應用開發及App開發。它不同於一般語言，它會先將原始碼編譯成位元組碼，後在依各不同平台上的虛擬機器來解釋執行因此實現了「一次編寫，到處執行」的跨平台特性。它與傳統的程式語言不同，它兼容許多java開發商所撰寫的套件，使java功能越來越強大、越來越完善。昇陽電腦也就是James Gosling所任職的公司對Java語言的解釋是：「Java程式語言是個簡單、物件導向、分散式、解釋性、健壯、安全與系統無關、可移植、高效能、多執行緒和動態的語言」。
+在實習期間，由於主管們大部分結是使用java進行開發，為求程式能共兼容，本來我想用Python來完成主管交予的工作，因此轉而研究起java。後經過一小段時間的練習，發現其實java是非常好上手的，撰寫容易、功能完善、還有許多套件能提升你的撰寫效率，加上許多的例外處理讓你很容易進行debug，也不需要小心翼翼的處理指標問題，我覺得java是款非常適合有點基礎的人學習的程式語言，且用途也很廣泛。</p>
+								<h3>Solr資料庫</h3>
+								<p>Solr資料庫是Apache Lucene專案的開源搜尋平台，主要功能包括全文檢索、命中標示、資料庫整合。主要是由java編寫。相較於我使用過的MS SQL、MySQL等資料庫，我覺得Solr非常適合用於存放文本，因為它存放資料的方式有點類似於JSON的風格，運用 欄位名稱：內容 的方式來進行存放。不過由於我以前並未使用過此資料庫，主管有稍微講解一下其用法，並教導我語法。透過java可以很方便的對Solr進行存取。
+Solr資料庫與其他資料庫最大的不同我覺得是它使用核心(Core)來當成它存放資料的地方，我們可以把核心當成一個資料表，對於個別的資料表我們都可以進行不同的設定。
+</p>
+								<h3>(4) Recurrent Neural Network</h3>
+								<p>Recurent Neural Network(RNN)遞歸神經網路，為類神經網路的一種，為機器學習的一部份。要了解RNN首先就得了解機器學習是什麼，機器學習主要是設計和分析一些讓電腦可以自動「學習」的演算法，從資料中歸納或整理出一些規律或資訊，並透過規律對未知的資料進行預測，機器學習大致上可分為兩類：監督式學習及非監督式學習，監督式學習主要是從訓練資料中學習到一個模式(learning model)並依此來對新的資料進行判斷，而非監督式學習則相反，不需要人工標籤，而是對數據進行據類。 van Rossum，它對Python的定義是「優雅」、「明確」、「簡單」，適合用於處理單件事物。在剛進入公司時，學長推薦我們可以嘗試學習Python，透過Codecademy網站的練習，很快的懂得如何撰寫Python程式語言。它寫起來真的如創始人所描述的簡單及優雅，由於要求縮排，因此Python的程式碼寫起來即是整整齊齊的，它拿掉了傳統的括號及分號，避免了許多因人為疏失而產生的意外。也不需要對變數進行宣告，正因為不需要宣告，對變數的處理就要更加小心，避免發生不預期的錯誤。資工系學長所研究的影像辨識就是使用Python的程式與openCV輔助套件。</p>
+								<p>類神經網路又稱人工神經網路是一種運用節點相連來形成一個類似生物神經的結構，能夠學習歸納，也就是說能夠通過已知資料的實驗運用來進行學習，它能夠推理產生一個可以自動識別的系統，此外它們也具有推理功能，只是它們是建立在邏輯演算法的基礎上，也就是說它們之所以能夠推理，基礎是需要有一個推理演算法則的集合。其基本的架構有三個部分：輸入層（Input layer）、輸出層（Output layer）、及隱藏層（Hidden layer）隱藏層介於輸入及輸出之間，可以是一層也可以是多層。</p>
+								<p>而RNN則是類神經網路的其中一種，以下將介紹兩種RNN的形式，一種為最簡單的SimpleRNN，另一個為更進階的LSTM，由於LSTM的效果更好一些，因此現在講RNN通常都是只LSTM。
+								SimpleRNN的結構如下圖：</p>
+								<span class="image main"><img src="images/pic01-16.png" alt="" /></span><p>(simpleRNN)</p>
+								<p>圖的左邊為一個RNN細胞，其中x為輸入、o為輸出、s為存於細胞中的值U、V、W為一權重，控制值的計算，值得注意的是，W部分代表的是一個暫存記憶，裡面的值會成為下一個時間點的s。右邊則為不同時間點t-1、t、t+1單個RNN網路的運作方式，假設U的計算方式為乘算、W為加算、V為乘算，此時在t-1的時間點輸入為1，細胞中的值也是1，此時在計算輸出時便是1乘1而W的暫存值為1加1。下個時間點我們同樣輸入1，此時細胞中的值已被更新為2因此計算出的輸出即為2。
+									而學者將SimpleRNN改良發明出LSTM，範例如下：</p>
+								<span class="image main"><img src="images/pic01-17.png" alt="" /></span><p>(LSTM)</p>
+								<p>其最大的特點在於多加了三個門檻值用來操控神經資訊的更新，最早的SimpleRNN由於細胞中的值一直進行更新，因此較舊的資料就無法對現時的輸入產生影響。
+								這種保有過去計算資料的神經模式很適合用於具有時間性或順序性的資料處理，RNN最出色的應用便是在手寫字的影像辨識上，也可以做語音辨識、翻譯等模型訓練。</p>
+								<h3>(5) 如何撰寫論文</h3>
+								<p>我覺得寫論文算是蠻困難的一件事，首先得閱讀許多與你所做的研究相關的論文，撰寫時在用語上也得很嚴謹，且最好能進行舉例，讓閱讀者能更好的讀懂論文，此外好的撰寫結構也很重要，內文要緊緊的扣住主題，這次試著撰寫論文讓我學習到許多論文的撰寫技巧。</p>
+								<h3>(6) 如何做出好的報告</h3>
+								<p>由於我們幾乎每周三都要進行一次進度報告，因此可以藉此磨練報告的技巧，我們平時很清楚自己的工作，可是如何講解給其他人聽就要考驗報告的功力。PPT如何做的讓人一目瞭然、講解如何讓人能聽得懂，這都是我必須磨練的。剛開始報告的不清不楚，被組長校正，他告訴了我們許多的技巧。
+首先，若報告中出現圖片，則得明白的標示出圖片究竟代表什麼、或者圖片所呈現的是哪一個部分。然後在報告時，要在PPT中指出自己在講的位置，可以用Highlight、表框、箭頭等方式指出，並且若發現自己無法在一個頁面中完整的述說或解釋完整個概念，可以將它分成許多個，即使PPT頁面看起來很單調，只要能清楚的講完你所想表達的概念即可。再來是PPT標題的命名，標題代表了這張投影片所想表達的內容核心，即使是介紹同樣的東西，也不會讓標題重複，至少要在後面新增加(Continue)讓看的人能知道這是話題的延續。最後是回顧，由於組長及主管們平時都很忙，也有許多自己的事要處理，也不一定能記住我們上一次報告究竟做了哪些東西，因此最好要在報告現在的進度前先進行上次的回顧，好讓主管了解你目前究竟在做些什麼，並銜接到現在的進度。
+</p>
+
+								</article>
+
+						<!-- About -->
+							<article id="Feedback">
+								<h2 class="major">自我評估及感想</h2>
+								<p>首先是對於自己的評估，我覺得自己花了很大的心力在工作上面，並很努力的嘗試著完成工作。雖然我們的工作壓力並不是很大，也沒有需要做出產品、上班時間很彈性、主管也不怎麼管我們，可是相較於資工系我們在程式方面的功力實在是差距太大了，因此不認真可不行。從二月二號實習至今，我每天都準時的上下班，不遲到、不早退，這是對工作的基本要求。而當工作需要什麼技能，可是我並不會時，我就必須去自行學習，而當自己在工作上有問題或是對主管的要求有不清楚的部分，我就會去請教主管，以確保我做的事符合主管的要求。若組長因為公務忙碌而沒有進行進度會議時，我會找時間去向主管報告我前的進度，讓主管好掌握我究竟在做什麼。缺點方面，由於有時會要閱讀論文，或對程式進行debug而其過程通常枯燥乏味，在加上還有課堂上的報告或考試要顧，有時會出現稍稍恍神的情形，但不影響工作的進度。綜合上述所說，我認為自己在工作上的表現還算不錯。</p>
+								<p>心得感想方面，我覺得來中研院數位文化中心實習是很幸運的一件事，它就像學校的延伸，不只能學習到許多新知，相較於學校多了更多實作的過程。由於數位文化中心的定位是在為保存好的文化資料進行創新應用及保存再利用，在這裡工作讓我了解到究竟我們有多少文化資產並沒有正確的被使用，也缺乏大家來對它進行活化以提供大眾觀看或進行研究。同時要成功的將文化資產推銷給觀眾也是一門艱深的課題，大部分的民眾對於一些冷門知識並沒有那麼熱衷，要能成功讓這些文化資產成功進入大眾眼裡就得以平易近人的方式來實行像是漫畫或小說。又或者要提供文化資產供學者們研究，如何提供好的工具也是一個困難點，舊時代運用肉眼和紙張書寫的研究方式太沒有效率了，且也無法保證精準度。在這個資訊時代，唯有運用科技、電腦幫助學者進行研究才是正確的方式。而影像辨識、網頁標註、文字探勘都是其中的一環。</p>
+								<p>我很喜歡這裡工作的氣氛，大致上算是輕鬆愉快，自由度也很高。聽到其他朋友實習的狀況，常常需要跑來跑去忙東忙西的、又或者要產出一些產品，與我們相比之下壓力就較大。我覺得實習最主要的目的就是要學到有用的技能、了解市場目前的需求，讓自己在畢業之後與社會在銜接上有著較少的衝擊。來到中研院我也確實的學到許多新技能，也懂得去哪裡才能獲取更多的知識，順便也探索一下自己的興趣。主管及學長們也對我們很好，有問題而他們知道如何解決的話大多會回答我們，若是不知道的話就會大家一起討論，看有沒有辦法想出辦法解決。所以我覺得來數位文化中心工作室非常值得的。</p>
+							    <p>暑假期間我大多在進行程式的撰寫，理解到專案的開發真的是一件很困難的事，平時我們撰寫小程式還好，大專案的分工及程式的合併就需要各成員的磨合，有時候小地方的改動便會對整個專案有很大的影響，或者必須請他人進行改動。這次撰寫的語言主要是JS及JSP，也是我較不熟悉的語言，因此有許多不足的地方，但大致還可以勝任。</p>
+<p>隨著專案慢慢開發，為了增加更多的功能，很多時候需要修改後台的程式，這次碰到最大的困難是程式邏輯上的問題，由於要處理的文本狀況很多，應付的狀況也很多，常常很難以一種方法對文本進行全面的處理，因此在處理方法上花了許久的時間，不過近期也解決了，接下來便是要處理效能的問題，未來我將與主管繼續討論。
+</p>
+
+
+							</article>
+
+						<!-- Contact -->
+							<article id="Suggest">
+								<h2 class="major">對系上的建議</h2>
+								<p>感謝系上有這麼好的機會提供我們實習，幫我們尋找廠商還提供面試場地，並告訴我們面試的準備技巧。</p>
+								<p>而我想建議系上，希望在安排資管系課程的時候能加入多更多程式實作的部分，讓我們做更多的練習，提升我們的程式技巧。然後希望在實習期間可以減輕一點課程負擔，由於校外實習規定要三天在公司工作，不太有時間能處理課業的事物，再加上若是課程有許多的報告要做也很比較難空出時間進行團隊討論，造成組員困擾。最後希望這份實習報告可以稍微減少規定的頁數。</p>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button special">Special</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button special icon fa-download">Icon</a></li>
+										<li><a href="#" class="button icon fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button special disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="field half first">
+											<label for="demo-name">Name</label>
+											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+										</div>
+										<div class="field half">
+											<label for="demo-email">Email</label>
+											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+										</div>
+										<div class="field">
+											<label for="demo-category">Category</label>
+											<div class="select-wrapper">
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+										</div>
+										<div class="field half first">
+											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+											<label for="demo-priority-low">Low</label>
+										</div>
+										<div class="field half">
+											<input type="radio" id="demo-priority-high" name="demo-priority">
+											<label for="demo-priority-high">High</label>
+										</div>
+										<div class="field half first">
+											<input type="checkbox" id="demo-copy" name="demo-copy">
+											<label for="demo-copy">Email me a copy</label>
+										</div>
+										<div class="field half">
+											<input type="checkbox" id="demo-human" name="demo-human" checked>
+											<label for="demo-human">Not a robot</label>
+										</div>
+										<div class="field">
+											<label for="demo-message">Message</label>
+											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

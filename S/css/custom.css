@@ -1,0 +1,10 @@
+.bold {
+	font-weight: bold;
+}
+
+.img-responsive {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	margin: 0 auto;
+}

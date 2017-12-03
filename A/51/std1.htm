@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Dimension by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="icon fa-heart"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>研究主題：註記系統開發</h1>
+                    <p>學生：鄭雲修<br /> 輔導教授：李怡慧
+                        <br />
+                    </p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#work">工作詳述</a></li>
+                    <li><a href="#detail">實習進度</a></li>
+                    <li><a href="#role">角色</a></li>
+                    <li><a href="#learning">學習</a></li>
+                    <li><a href="#experience">心得自評</a></li>
+                    <li><a href="#recommend">對系上的建議</a></li>
+                    <li><a href="../index.htm">上一頁</a></li>
+                    <!--<li><a href="#elements">Elements</a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- work -->
+            <article id="work">
+                <h2 class="major">工作詳述</h2>
+                <h3>(1)新程式交接</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 背景：從二月開始，我交接了學長的上一支程式-web annotation。而那段時間，學長開發了另一個程式IIIF editor。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;web annotation(網頁註記)：這是從二月到六月底我所負責的程式，包含了：laravel網頁架構(MVC架構)、annotatorjs(文字註記的開源軟體)、與最新的圖片註記(將annotatorjs的概念延伸到圖片)。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IIIF editor：從暑假開始(七月)至今我所多負責的程式，包含了：react網頁架構(component架構)、IIIF Manifest editor(使用IIIF Manifest規範的圖片瀏覽器)、leaflet(地圖顯示開源軟體)。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;伺服器管理工具：Rancher。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;過程：由於學長即將畢業，到中研院時間所剩無幾，直接帶我的主管也提出辭職，必須在學長出現的三天內交接完畢。學長向我解釋了他在程式中更動的部分，與資料庫的CRUD，便前主管一同離開了中研院。由於囫圇吞棗的學習，導致觀念不完整，雖然一開始的Debug還算順利，但現在回頭看是漏洞百出，當時也因此走了不少冤枉路。
+				</p>
+                <h3>(2)新舊程式互通</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所謂的互通，是強調圖片註記的互通。web annotation將註記儲存在MySQL資料庫，IIIF Manifest則是將整張圖片與其所有資訊組成一個JSON格式的檔案來操作。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我利用了前台JS的部分，將web annotation的圖片部分寫成一個IIIF Manifest格式的JSON，並將其存入Mongo資料庫，讓IIIF Manifest讀取；圖片註記部分，則是使用後台laravel的controller將註記以JSON格式的方式呈現，讓IIIF editor讀取圖片IIIF Manifest的otherContent時能連接到MySQL資料庫的註記資料。IIIF editor部分則是將註記存入MySQL資料庫，而web annotation可以直接讀取註記資料並顯示於網頁圖片中。
+				</p>
+                
+                <h3>(3)院內開發程式與外部開發程式互通</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IIIF Manifest的顯示器不只IIIF Manifest editor，其中還包含了mirador、diva.js、universal viewer、IIP viewer...等。我將每個viewer進行分析，找出其中功能較為豐富的viewer - mirador，並將IIIF editor與web annotation的資料呈現在mirador，達成圖片、註記的資料互通。</p>
+                
+                <h3>(4)其他(與主管、組長報告的方式)</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前主管的工作，是頻繁的督促我，只要我有問題、程式有地方卡住，不用等到我去提問他便會過來觀察我的工作進度與現況，並給予直接的指導；而前主管也會定期向組長報告我的近況，將我所做所學簡單扼要的讓組長明白。他幫助了我許多，無論是程式撰寫的技巧或網頁前後台觀念。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而在他離開之後，新主管是一個較為忙碌的正職員工，他被前主管譽為程式最強的職員，也因此他十分忙碌，許多工作都被交付給他。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我一開始還是以一個被動的心態，想等主管來找我，來了解我的近況。但有時兩天三天才來一次，而個性被動、新程式不完整的交接、不求甚解的我，讓工作進度大幅度落後。直到八月初組長回國，發現事情的嚴重性，並給予了一次的震撼教育，我才體認到情況已經改變，而需要跟著改變的，是我。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;從那之後，每半天到一天向主管報告今天的近況，將問題簡單整理提出，讓主管快速了解並給予新方向；並時時刻刻將自己所做所學紀錄，將繁複的內容過濾，組織程式的每個觀念與流程，直接向組長報告與討論。
+				</p>
+                
+            </article>
+
+            <!-- detail -->
+            <article id="detail">
+                <h2 class="major">實習進度</h2>
+                <h3>(1)交接IIIF editor</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 它是一個能顯示IIIF manifest的顯示器。由於我想要在這顯示器上提供annotation， Leaflet可以在顯示器上用畫線功能，而註記的組成剛好也是線段，便將顯示器的部分用leaflet取代。</p>
+                <span class="image main"><img src="images/work1.jpg" alt="" />(上圖為IIIF editor demo)</span>
+
+                <h3>(2)將web annotation 匯出成IIIF manifest</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 將一般網頁上的圖片匯出成IIIF manifest格式，並存入mongoDB。</p>
+                
+
+                <h3>(3)與其他顯示器互通</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 將圖片與註記用各種方法顯示。由於能夠顯示IIIF manifest的顯示器並不只有IIIF editor，如：mirador、diva.js、universal viewer、IIP viewer…等。我們選擇了功能較豐富的mirador來進行調整，將自己的IIIF manifest調整成能在其上面顯示。</p>
+                <span class="image main"><img src="images/work2.jpg" alt="" />(上圖為web annotation)</span>
+				<span class="image main"><img src="images/work3.jpg" alt="" />(上圖為mirador)</span>
+				<span class="image main"><img src="images/work4.jpg" alt="" />(上圖為IIIF  editor)</span>
+                
+                <h3>(4)重構程式</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 今年IIIF editor進行了升級，與原先許多功能衝突，為了使IIIF editor適當地呈現註記同時也能留住原本的功能，只能重構程式。而既然是同樣的事情再做一次，這次必須做的比之前更來的好，必須真正的了解react網頁架構，將原先的程式大改造。</p>
+                <span class="image main"><img src="images/newDemo.jpg" alt="" />(目前新版進度DEMO)</span>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 已完成功能，合併leaflet與IIIF manifest editor、將註記呈現、註記提示。
+其中，註記提示是最有趣的部份，以往我是很排斥CSS，因為我是被公認的美感白癡，但這次註記提示因為想做更多功能，而不用leaflet提供的註記顯示，所以我大量地使用css，同時也慢慢了解了UX/UI。
+</p>
+
+                
+
+
+
+            </article>
+            <!-- role -->
+            <article id="role">
+                <h2 class="major">工作當中扮演的角色</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主管的部下。按時回報進度、現況、遭遇難題。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;組長的部下。將工作內容整理、回報、討論未來工作。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;知識的分享者。每周三開會時，將自己所做的分享給每個同事，讓他們也能學習到我所學習的知識。</p>
+
+
+
+
+
+            </article>
+            <!-- learning -->
+            <article id="learning">
+                <h2 class="major">學習</h2>
+                <h3>一、技術面</h3>
+                <h4>javascript</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 這是最常用到的程式語法之一，在語法結構上與C語言有很多相似（例如if條件語句、while迴圈、switch語句、do-while迴圈等）。
+                </p>
+				
+                <h4>jquery</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jQuery是一套跨瀏覽器的JavaScript函式庫，簡化HTML與JavaScript之間的操作。
+                </p>
+				
+                <h4>annotator.js</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 這是一個開放資源的程式碼，他已經建立了許多套件及API，可以快速使用它提供的許多功能。
+                </p>
+				
+                <h4>php</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	是一種開源的通用電腦手稿語言，尤其適用於網路開發並可嵌入HTML中使用。
+                </p>
+				
+                <h4>css</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	一種用來為結構化文件（如 HTML 文件或 XML 應用）添加樣式（字型、間距和顏色等）的電腦語言，由 W3C 定義和維護。</p>
+				
+                <h4>laravel</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 是網頁應用程式的框架，功能強大，提供健壯網頁應用程式強大的工具，一個極好的反轉控制容器(IoC)，語意表達式的 Migration 系統，支援緊密整合的單元測試。</p>
+					
+				<h4>React</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一種網頁架構，但並非MVC，而是將網頁中所將運用到的每個部份變成component，並用app做簡單的管理。</p>
+				
+				<h4>Leaflet</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一個顯示器的開源軟體，主要是應用於地圖。</p>
+				
+				<h4>IIIF Manifest</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一種對圖片與圖片敘述的規範，將各種資料包進一個JSON檔案，而顯示器只需解析此JSON，即可呈現該圖。</p>
+				
+				<h4>Open annotation data model</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 由W3C所制，一種對網頁註記的規範。</p>
+				
+				
+                <h3>二、非技術面</h3>
+                <h4>時間管理</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 中研院給員工很大程度上的自由，也因此必須自己控制，什麼時候該休息、什麼時候該工作。我讓自己每一個半小時到兩個小時便起身，離開電腦、思考自己做了什麼?應該要做什麼?每個問題用一句話來解釋，就像是對自己做報告一般。
+                </p>
+				
+				<h4>情緒管理</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 寫程式遇到解部了的bug是很常有的事情，無論原因是對程式的了解、語法的應用、基本觀念，都會在不自覺中影響到程式的正常運作。因此問題若卡住一兩個小時是稀鬆平常的事情，解決方法雖然多，但最重要的是穩住情緒，不能讓一個錯誤會了自己一整天的工作心情。這我撰寫完程式時，我一定會想，這程式肯定有錯，然後抱著這個心態去接受錯誤，細心地找出問題點。
+                </p>
+				
+				<h4>閱讀文件</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 程式開發時，有許多的元件並不是自己寫的，而是利用其他開源軟體所開放的功能。這時要耐心的看完文件，並在有問題時能知道該去哪一頁找答案。對於英文文件更是需要耐心的一個個翻譯，可以說給自己聽或做點筆記。
+                </p>
+				
+				<h4>表達能力</h4>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 要對工作負責的方法，認真工作是必要的，但如何表達自己所做的事更為重要。常常埋頭做得非常認真，但卻沒有好好表達作了什麼，甚至有時連自己做了什麼都不知道。因此被認為沒認真工作，甚至被認為能力不足，這都是會讓自己處於非常危險的狀態。因此我在工作之餘，必定會仔細思考並整理，將它用圖片、表格、流程呈現出來，方便主管們對我的了解。
+                </p>
+
+
+
+            </article>
+
+            <!-- experience -->
+            <article id="experience">
+                <h2 class="major">自我評估及心得感想</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一開始我會的程式，應該就只有條件判斷、迴圈，最多也就是把他們放在一個函式裡使用。來到中研院之後，程式的功力大增，對於物件的觀念也變得比以往來得清楚。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 而我從來就沒有與人合作過任何程式，學校所謂的分組程式作業，也都是自己寫自己的。這次突然拿了一份程式，要我看懂，要我修改它，我從來沒遇過這種要求。而當我知道，很多大型的程式，都是不斷地修改，不斷地交接，從第一個人到最後一個人，它不斷地增加自身的價值，而我們負責修改的人，就是要吸收前人的經驗，讓程式更加完善。我覺得耐心是這段時間培養最多的一個能力，唯有耐心的去看，不著急、不強求自己，順著觀念步驟，一步步了解程式即可。
+                </p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在這段時間也很感謝學長、主管的幫助，他們耐心的指導，適時的點出我的盲點，讓我在學習上更加順利、有成就感。而學長也不時會分享他的經驗，讓我了解到許多人生哲學。工作環境也很舒服，一進去就有自己的電腦，使用起來也非常舒服，電腦效能、網路速度都是一流。我想我真的很幸運能來到中研院實習，也很感謝系上的支持與媒合，謝謝
+                </p>
+
+
+            </article>
+            <!-- recommend -->
+            <article id="recommend">
+                <h2 class="major">對系上的建議</h2>
+
+                <h3>壹、 程式語言自修的課程</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這段時間我研究了許多程式語言的線上教學，有影片也有教學網站，我覺得程式語言這門課並不需要開到兩學期。一學期將觀念導入，之後都能用教學網站、教學影片來取代，這樣就可以節省師資。而考核方式也可以用線上考試，並不需要全部人都跑到電腦教室去上機考，當學生跑完課程教學，最後在做一個專案作業來當作審核即可。也不需要買教科書，很多知識在網路上都寫得很清楚，觀念的部分也可以用投影片解釋。</p>
+                <h3>貳、 建立程式基礎</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;身為資訊相關科系，我認為具有基本的程式設計能力非常的重要，但是以自身的經驗來說，我們在大一一年所學的程式設計，感覺實力完全不如資工系程式設計修一學期的程式設計，在大二的時候，程式設計能力已經遠遠比步上了。我認為系上的課程有許多的漏洞導致同學可以輕易取得學分但並不具有相對的能力，希望系上可以建議相關課程之教授多注重學生的程式能力，若有必要也可以要求學生參與大學程式能力檢定（CPE），才得以實習。而且公司認為我們應該要修的課程，例如說作業系統(OS)，演算法等等，我們只有初淺的在計算機概論學過，遠遠不如別人開了一學期的課程，因此希望教授可以多準備一下這類的課程，打好元智資管學生的程式基礎。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但最後還是感謝元智大學資管系給了同學們這樣的機會，讓我能在這段實習期間能夠增廣見聞，以及可以更了解自己不足的地方、也讓我們挖掘自己的興趣，知道自己是否真的喜歡做資訊相關的工作，也體會到實務和理論的差別，致力於培養未來所需的專業能力。</p>
+            </article>
+
+
+
+            <!-- Elements -->
+            <article id="elements">
+                <h2 class="major">Elements</h2>
+
+                <section>
+
+
+                    <pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+                </section>
+
+
+
+
+
+            </article>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <span class="icon fa-heart"></span> <span class="icon fa-heart"></span>
+            <span class="icon fa-heart"></span> <span class="icon fa-heart"></span>
+            <span class="icon fa-heart"></span> <span class="icon fa-heart"></span>
+            <span class="icon fa-heart"></span> <span class="icon fa-heart"></span>
+            <span class="icon fa-heart"></span> <span class="icon fa-heart"></span>
+            <span class="icon fa-heart"></span> <span class="icon fa-heart"></span>
+        </footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
